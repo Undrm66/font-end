@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>anhnii too mun esehiig shalga</title>
+</head>
+<body>
+    <p id="demo"></p>
+<script>
+    let num = parseInt(prompt("Toogoo oruul"));
+
+    let isPrime = true;
+
+    // 1 бол анхны тоо биш
+    if (num <= 1) {
+        isPrime = false;
+    }
+
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            isPrime = false;
+            break;
+        }
+    }
+
+    if (isPrime) {
+        document.getElementById("demo").innerHTML = num + " = anhnii too mun";
+        console.log(num + " = anhnii too mun");
+    } else {
+        document.getElementById("demo").innerHTML = num + " = anhnii too bish";
+        console.log(num + " = anhnii too bish");
+    }
+</script>
+</body>
+</html>
